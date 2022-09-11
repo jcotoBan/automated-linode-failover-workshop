@@ -7,6 +7,9 @@ Lab reference: https://github.com/akamai/linode-failover-workshop
 --> install terraform (this setup was made with Terraform v1.2.8)
 https://www.terraform.io/downloads
 
+Optional:
+
+-->VisualStudio Code
 
 # Steps
 
