@@ -17,9 +17,10 @@ Optional:
 
 
 ```
-
-if __name__ == '__main__':
-    app.run(host='139.144.35.12', port=5000, debug=True)  # run our Flask app 
+-rw-r--r--  1 jucot  staff  2575 Sep 11 17:57 labsetup.sh
+-rw-r--r--  1 jucot  staff  1034 Sep 11 17:10 linode-failover-workshop.tf
+drwxr-xr-x  4 jucot  staff   128 Aug 29 12:25 ssh-keys
+-rw-r--r--  1 jucot  staff   103 Sep  4 20:37 terraform.tfvars
 ```
 
 2-Move to that folder through the command line or by opening the folder on VS Code
