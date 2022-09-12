@@ -127,7 +127,6 @@ nodebalancers
 
 kubernetes cluster
 
-
 ```bash
 ./clean.sh
 ```
