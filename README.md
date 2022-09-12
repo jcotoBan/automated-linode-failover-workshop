@@ -71,7 +71,7 @@ resource "linode_sshkey" "workshop_key" {
 
 # What to expect in regards to the deployment
 
-Once terraform apply is run succesfully, the first thing that will come up on our Linode UI will be an instance called workshop instance, from which the kubernetes setup will be triggered:
+Once terraform apply starts running the first thing that will come up on our Linode UI will be an instance called workshop instance, from which the kubernetes setup will be triggered:
 
 
 ![](images/wsi.jpg)
