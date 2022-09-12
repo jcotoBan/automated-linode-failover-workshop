@@ -31,13 +31,20 @@ echo 'export TF_VAR_token="<Type your linode token here>"' >> .bashrc #Inserting
 
 ```
 
-![](images/3.jpg)
+3-Edit file terraform.tfvars, add a root password for the Linode instance and add the Linode token there as well:
 
-2- Then, once in there run Terraform init:
+```
+token = ""
+root_pass = ""
+```
+
+4- Then, once the edits are completed, move to the folder and run terraform init:
 
 ```
 terraform init
 ```
+
+![](images/terraformOutput.jpg)
 
 
 
