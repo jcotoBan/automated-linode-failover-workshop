@@ -69,11 +69,34 @@ resource "linode_sshkey" "workshop_key" {
 }
 ```
 
+# What to expect in regards to the deployment
+
+Once terraform apply is run succesfully, the first thing that will come up on our Linode UI will be an instance called workshop instance, from which the kubernetes setup will be triggered:
+
+
+![](images/wsi.jpg)
+
+
+It takes around one minute, and after that, we should start seeing the individual worker nodes that are part of the 2 clusters, 6 in total.
+
+![](images/clusteroff.jpg)
+
+![](images/clusters.jpg)
+
+Then, after another 2 minutes each worker node should boot and move to running status. 
+
+![](images/clusteron.jpg)
+
+Finally, if we check the nodebalancers, there should be 2 nodebalancers up. They may show the worker nodes as down for some time, as it takes time to run and start the healthchecks. The websites should be available at this point, so if you try any of the urls you should get a response.
 
 
 
 
 
+Please notice the setup will take less of more time depending on Linode aspects that are not controllable. 
+Sometimes the Linode UI doesnt refresh right away, so start refreshing and give some time to complete.
+
+The lab can take between 5 to 10 minutes to complete. 
 
 
 
