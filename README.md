@@ -60,7 +60,7 @@ terraform apply --auto-approve #bypass approval prompt.
 ssh -i ssh-keys/workshopK spaceU@<public-ip-of-Linode-instance> #Considering your current directory is where ssh-keys folder are.
 ```
 
-Notice that paswordless ssh keys have been added for easy of use, however if you consider this insecure (which it is) you can provide create your own keys, just make sure to edit the linode-failover-workshop.tf file on line 53
+Notice that paswordless ssh keys have been added for easy of use, however if you consider this insecure (which it is) you can provide/create your own keys, just make sure to edit the linode-failover-workshop.tf file on line 53
 
 ```HCL
 resource "linode_sshkey" "workshop_key" {
