@@ -53,7 +53,7 @@ terraform apply #then answer yes
 terraform apply --auto-approve #bypass approval prompt.
 ```
 
-6-To login to the linode instance from where the kubernetes setup is made, run the following command:
+6-To login to the linode instance from where the kubernetes setup is made, a user spaceU is created. In order to login you can issue command:
 
 
 ```bash
