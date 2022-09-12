@@ -89,9 +89,7 @@ Then, after another 2 minutes each worker node should boot and move to running s
 
 Finally, if we check the nodebalancers, there should be 2 nodebalancers up. They may show the worker nodes as down for some time, as it takes time to run and start the healthchecks. The websites should be available at this point, so if you try any of the urls you should get a response.
 
-
-
-
+![](images/nodebalancers.jpg)
 
 Please notice the setup will take less of more time depending on Linode aspects that are not controllable. 
 Sometimes the Linode UI doesnt refresh right away, so start refreshing and give some time to complete.
