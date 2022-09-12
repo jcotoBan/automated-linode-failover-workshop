@@ -2,7 +2,7 @@
 A way of setting up the linode-workshop lab in single operation by using Terraform.
 Lab reference: https://github.com/akamai/linode-failover-workshop
 
-#Requirements:
+# Requirements:
 
 --> install terraform (this setup was made with Terraform v1.2.8)
 https://www.terraform.io/downloads
@@ -53,7 +53,15 @@ terraform apply #then answer yes
 terraform apply --auto-approve #bypass approval prompt.
 ```
 
-6-To login to the linode instance from where the kubernetes setup is made, a user spaceU is created. In order to login you can issue command:
+6-To login to the linode instance from where the kubernetes setup is made, a user spaceU is created. 
+Just make sure to change the default keys permissions:
+
+```bash
+chmod 700 ssh-keys 
+chmod 600 ssh-keys/workshopK*
+```
+
+In order to login you can issue command:
 
 
 ```bash
@@ -95,6 +103,43 @@ Please notice the setup will take less of more time depending on Linode aspects 
 Sometimes the Linode UI doesnt refresh right away, so start refreshing and give some time to complete.
 
 The lab can take between 5 to 10 minutes to complete. 
+
+
+# Clean Up part
+
+1-Login to the machine as spaceU user (remember to change the ssh-keys file permissions).
+
+2-Switch to root user and then move to root home path:
+
+```bash
+sudo su
+```
+
+then
+
+```bash
+cd ~
+```
+
+3-Execute the clean.sh script. This will remove:
+
+nodebalancers
+kubernetes cluster
+
+
+```bash
+./clean.sh
+```
+
+![](images/cleaner.jpg)
+
+Wait for it to finish.
+
+Sometimes, 1 or 2 worker nodes will need to be deleted manually, just delete them from linodes dashboard.
+
+4-From your local machine, run terraform destroy to delete the workshopinstance linode.
+
+
 
 
 
