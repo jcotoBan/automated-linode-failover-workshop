@@ -124,6 +124,7 @@ cd ~
 3-Execute the clean.sh script. This will remove:
 
 nodebalancers
+
 kubernetes cluster
 
 
