@@ -11,7 +11,7 @@ Optional:
 
 -->VisualStudio Code
 
-# Instructions
+# Deploy Instructions
 
 1-Download the folder either through the UI or by pulling the git repository. Make sure the files are in an isolated folder, as it will be the Terraform working directory. If you list the files, you should see something similar as the following:
 
@@ -46,6 +46,28 @@ terraform init
 
 ![](images/terraformOutput.jpg)
 
+5-Then, to deploy the lab, just run terraform apply. You can run terraform plan to verify if the setup will be made as expected.
+
+```bash
+terraform apply #then answer yes
+terraform apply --auto-approve #bypass approval prompt.
+```
+
+6-To login to the linode instance from where the kubernetes setup is made, run the following command:
+
+
+```bash
+ssh -i ssh-keys/workshopK spaceU@<public-ip-of-Linode-instance> #Considering your current directory is where ssh-keys folder are.
+```
+
+Notice that paswordless ssh keys have been added for easy of use, however if you consider this insecure (which it is) you can provide create your own keys, just make sure to edit the linode-failover-workshop.tf file on line 53
+
+```HCL
+resource "linode_sshkey" "workshop_key" {
+  label = "workshopkey"
+  ssh_key = chomp(file("ssh-keys/workshopK.pub"))
+}
+```
 
 
 
