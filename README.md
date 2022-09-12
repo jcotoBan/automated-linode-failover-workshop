@@ -131,7 +131,6 @@ kubernetes cluster
 ```bash
 ./clean.sh
 ```
-
 ![](images/cleaner.jpg)
 
 Wait for it to finish.
@@ -140,8 +139,7 @@ Sometimes, 1 or 2 worker nodes will need to be deleted manually, just delete the
 
 4-From your local machine, run terraform destroy to delete the workshopinstance linode.
 
-
-
+![](images/localdestroy.jpg)
 
 
 
