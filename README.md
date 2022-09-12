@@ -23,7 +23,14 @@ drwxr-xr-x  4 jucot  staff   128 Aug 29 12:25 ssh-keys
 -rw-r--r--  1 jucot  staff   103 Sep  4 20:37 terraform.tfvars
 ```
 
-2-Move to that folder through the command line or by opening the folder on VS Code
+2-Move to that folder through the command line or by opening the folder on VS Code. Edit file labsetup.sh
+
+2- Then, once in there run Terraform init:
+
+```
+terraform init
+```
+
 
 
 
