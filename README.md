@@ -23,7 +23,15 @@ drwxr-xr-x  4 jucot  staff   128 Aug 29 12:25 ssh-keys
 -rw-r--r--  1 jucot  staff   103 Sep  4 20:37 terraform.tfvars
 ```
 
-2-Move to that folder through the command line or by opening the folder on VS Code. Edit file labsetup.sh
+2-Move to that folder through the command line or by opening the folder on VS Code. Then edit file labsetup.sh. In line #30, add your Linode Token.
+
+``` bash
+
+echo 'export TF_VAR_token="<Type your linode token here>"' >> .bashrc #Inserting your linode token as an env variable on remote host.
+
+```
+
+![](images/3.jpg)
 
 2- Then, once in there run Terraform init:
 
